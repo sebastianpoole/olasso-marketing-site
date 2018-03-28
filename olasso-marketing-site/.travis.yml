@@ -1,18 +1,16 @@
 language: node_js
 node_js:
-  - "node"
+  - "stable"
 cache:
-  - yarn
-install:
-  - yarn install
+  directories:
+  - node_modules
 script:
-  - yarn build
+  - npm test
+  - npm run build
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  provider: pages
   skip_cleanup: true
+  github_token: $github_token
   local_dir: build
-  default_text_charset: "utf-8"
-  bucket: "olasso-marketing-site"
-  region: ap-southeast-1
+  on:
+    branch: master
