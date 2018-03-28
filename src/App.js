@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './scenes/Home/index';
-import logo from './logo.svg';
 import './App.css';
 import { Row, Col, Menu, Icon } from 'antd';
 
@@ -18,7 +17,7 @@ class App extends Component {
       current: e.key,
     });
   }
-  
+
   render() {
     return (
       <BrowserRouter>
