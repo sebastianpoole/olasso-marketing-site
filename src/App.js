@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './scenes/Home/index';
 import './App.css';
-import { Row, Col, Menu, Icon } from 'antd';
-
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+import logo from './components/Logo/logo-white.png'
+import { Button } from 'antd';
 
 class App extends Component {
-  state = {
+  constructor(props) {
+    super(props);
+    this.focus = this.focus.bind(this);
+    this.state = {
     current: 'mail',
+    }
   }
+
   handleClick = (e) => {
     console.log('click ', e);
     this.setState({
@@ -18,44 +21,35 @@ class App extends Component {
     });
   }
 
+  focus() {
+    this.body.signUp.textInput.focus();
+  }
+  
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-        <Row>
-          <Col span={12}>
-            <header className="App-header">
-              <Menu
-        onClick={this.handleClick}
-        selectedKeys={[this.state.current]}
-        mode="horizontal"
-      >
-        <Menu.Item key="mail">
-          <Icon type="mail" />Navigation One
-        </Menu.Item>
-        <Menu.Item key="app" disabled>
-          <Icon type="appstore" />Navigation Two
-        </Menu.Item>
-        <SubMenu title={<span><Icon type="setting" />Navigation Three - Submenu</span>}>
-          <MenuItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
-          </MenuItemGroup>
-          <MenuItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </MenuItemGroup>
-        </SubMenu>
-        <Menu.Item key="alipay">
-          <a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
-        </Menu.Item>
-      </Menu>
-            </header>
-          </Col>
-        </Row>
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
+          <div className="navbar navbar-default navbar-static-top">
+          <div className="container">
+            <div className="navbar-header pull-left">
+              <div className="menu-logo">
+                <a href="/">
+                  <img className="" src={logo} alt="Olasso Logo" />
+                </a>
+              </div>
+            </div>
+            <div className="navbar-header pull-right">
+              <Button className="main-navigation__enquiry" onClick={this.focus.bind(this)}>Get In Touch</Button>
+            </div>
+          </div>
+          </div>
+          <div className="container-fluid content-body">
+            <div className="">
+              <Switch>
+                <Route exact path="/" render={()=><Home ref={(bd) => this.body = bd} />} />
+              </Switch>
+            </div>
+          </div>
         </div>
       </BrowserRouter>
     );
