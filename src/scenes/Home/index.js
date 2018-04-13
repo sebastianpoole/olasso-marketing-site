@@ -80,19 +80,19 @@ class Home extends React.Component {
     	    <div className="col home-references__title">
     	      <h1>How does <span className="olasso-logo">Olasso</span> work?</h1>
     	      <div className="row home-references__icons">
-    	        <div className="col">
+    	        <div className="col-lg-3">
     	          <i className="fas fa-shopping-bag"></i>
     	          <p>Buy online through your favourite retailer and receive your parcel.</p>
     	        </div>
-    	        <div className="col">
+    	        <div className="col-lg-3">
     	          <i className="fas fa-mobile-alt"></i>
     	          <p>Need to return your purchase? <span className="olasso-logo">No issues.</span> Follow the retailer's instructions to their branded <span className="olasso-logo">Olasso</span> return platform. Lodge the return from your mobile or desktop device in 5 easy steps.</p>
     	        </div>
-    	        <div className="col">
+    	        <div className="col-lg-3">
     	          <i className="fas fa-shipping-fast"></i>
     	          <p>Drop off the return at your nearest 7/11, schedule a pick up, or download a generated label to simply post the return.</p>
     	        </div>
-    	        <div className="col">
+    	        <div className="col-lg-3">
     	          <i className="fas fa-hand-holding-usd"></i>
     	          <p>Your refund or store credit can be processed within 24 hours. Time to start browsing online again!</p>
     	        </div>

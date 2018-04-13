@@ -122,6 +122,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0px;
 }
 
+.footer ul {
+  padding-left: 0px;
+}
+
 .footer li {
   padding: 0px;
 }
@@ -398,7 +402,17 @@ h1, h2, h3, h4, h5, h6 {
   .footer {
     text-align: center;
   }
+
+  .home-signup__input {
+    min-width: 400px;
+  }
+
   .home-signup__button {
     margin-left: 0px;
+    clear: both;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
   }
+
 }
