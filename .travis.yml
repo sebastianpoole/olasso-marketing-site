@@ -4,7 +4,7 @@ node_js:
 cache:
   - yarn
 install:
-  - yarn install --no-optional
+  - yarn install --ignore-optional
 script:
   - yarn build
 deploy:
