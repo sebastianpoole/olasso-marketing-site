@@ -29,20 +29,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <div className="navbar navbar-default navbar-static-top">
-          <div className="container">
-            <div className="navbar-header pull-left">
-              <div className="menu-logo">
-                <a href="/">
-                  <img className="" src={logo} alt="Olasso Logo" />
-                </a>
-              </div>
-            </div>
-            <div className="navbar-header pull-right">
-              <Button className="main-navigation__enquiry" onClick={this.focus.bind(this)}>Get In Touch</Button>
-            </div>
-          </div>
-          </div>
           <div className="container-fluid content-body">
             <div className="">
               <Switch>
