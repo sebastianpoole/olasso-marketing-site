@@ -1,16 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
 import MailChimpSignUp from './services/MailchimpSignUpForm/MailchimpSignUp'
-import Slider from 'react-slick'
-import SliderOne from './assets/images/olasso-main-one-platform.png'
-import SliderTwo from './assets/images/olasso-main-save-return.png'
-import SliderThree from './assets/images/olasso-main-customer-journey.png'
-import SliderFour from './assets/images/olasso-main-business-insights.png'
-import SliderFive from './assets/images/olasso-main-automate-processes.png'
-import MarketingBranding from './components/HelpPanel/MarketingBranding'
-import OperationsIT from './components/HelpPanel/OperationsIT'
-import FinanceAccounting from './components/HelpPanel/FinanceAccounting'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 class Home extends React.Component {
@@ -46,12 +35,6 @@ class Home extends React.Component {
   }
 
   render() {
-
-  	var settings = {
-      dots: true
-    };
-
-    const { helpSelection } = this.state
 
   	return(
   	  <div>

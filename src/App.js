@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './scenes/Home/index';
 import './App.css';
-import logo from './components/Logo/logo-white.png'
-import { Button } from 'antd';
 
 class App extends Component {
   constructor(props) {
